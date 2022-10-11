@@ -52,3 +52,5 @@ surveys = {
     "satisfaction": satisfaction_survey,
     "personality": personality_quiz,
 }
+
+current_survey = satisfaction_survey

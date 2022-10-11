@@ -1,0 +1,21 @@
+{% block title %}Question {{number}}{% endblock %}
+
+{% block content %} 
+{% for msg in get_flashed_messages() %}
+    if msg:
+    <p>{{msg}}</p>
+{% endfor %}
+<h1>Question number {{number}}</h1>
+
+<h2>{{current_question}}</h2>
+<form action="/answers/" type="post" >
+    {% for choice in current_choices%}
+    <input type="radio" name={{number-1}} value={{choice}}>{{choice}}
+    {%endfor%}
+    <button>Submit</button>
+</form>
+
+
+{%endblock%}
+
+

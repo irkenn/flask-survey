@@ -1,0 +1,11 @@
+{% block title %}{{title}}{% endblock %}
+
+{% block content %}
+<h1>{{title}}</h1>
+<p>Please read carefully the instructions and answer each question in the space</p>
+<form action="/questions/0" type="post">
+    <label for="start-button">To start the survey click the button</label>
+    <button>Start Survey</button>
+</form>
+
+{% endblock %}
