@@ -21,6 +21,7 @@ def home():
 def questions(question_number):
     """This will retrieve the value as an inegrer and find the question that matches the
     index of that value"""
+    
     if len(responses) == len(current_survey.questions):
         return render_template('thank-you.html')
     elif question_number <= len(current_survey.questions) and question_number == len(responses):
